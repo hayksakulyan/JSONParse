@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		626FE1872A40683600911F6E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FE1862A40683600911F6E /* Product.swift */; };
+		626FE1892A407C3800911F6E /* ProductListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FE1882A407C3800911F6E /* ProductListScreen.swift */; };
+		626FE18B2A4082ED00911F6E /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FE18A2A4082ED00911F6E /* ProductCellView.swift */; };
+		626FE18D2A408CA500911F6E /* Local+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626FE18C2A408CA500911F6E /* Local+Extensions.swift */; };
 		62754BFE2A374FBA0031EAD6 /* JSONparseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62754BFD2A374FBA0031EAD6 /* JSONparseApp.swift */; };
 		62754C022A374FBB0031EAD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62754C012A374FBB0031EAD6 /* Assets.xcassets */; };
 		62754C052A374FBB0031EAD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62754C042A374FBB0031EAD6 /* Preview Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		626FE1862A40683600911F6E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		626FE1882A407C3800911F6E /* ProductListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListScreen.swift; sourceTree = "<group>"; };
+		626FE18A2A4082ED00911F6E /* ProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
+		626FE18C2A408CA500911F6E /* Local+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Local+Extensions.swift"; sourceTree = "<group>"; };
 		62754BFA2A374FBA0031EAD6 /* JSONparse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONparse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62754BFD2A374FBA0031EAD6 /* JSONparseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONparseApp.swift; sourceTree = "<group>"; };
 		62754C012A374FBB0031EAD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				62754C0C2A37520C0031EAD6 /* URL+Extensions.swift */,
+				626FE18C2A408CA500911F6E /* Local+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -106,6 +115,7 @@
 		62754C122A37572C0031EAD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				626FE18A2A4082ED00911F6E /* ProductCellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +125,7 @@
 			children = (
 				62754C142A3758E00031EAD6 /* Category.swift */,
 				62754C162A375D940031EAD6 /* StoreModel.swift */,
+				626FE1862A40683600911F6E /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				62754C192A3833230031EAD6 /* CategoryListScreen.swift */,
+				626FE1882A407C3800911F6E /* ProductListScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -198,11 +210,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				62754C102A3756D70031EAD6 /* StoreHTTPClient.swift in Sources */,
+				626FE18B2A4082ED00911F6E /* ProductCellView.swift in Sources */,
 				62754C152A3758E00031EAD6 /* Category.swift in Sources */,
 				62754C0D2A37520C0031EAD6 /* URL+Extensions.swift in Sources */,
 				62754BFE2A374FBA0031EAD6 /* JSONparseApp.swift in Sources */,
 				62754C1A2A3833230031EAD6 /* CategoryListScreen.swift in Sources */,
 				62754C172A375D940031EAD6 /* StoreModel.swift in Sources */,
+				626FE18D2A408CA500911F6E /* Local+Extensions.swift in Sources */,
+				626FE1872A40683600911F6E /* Product.swift in Sources */,
+				626FE1892A407C3800911F6E /* ProductListScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

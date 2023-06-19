@@ -10,39 +10,44 @@ import SwiftUI
 struct CategoryListScreen: View {
     
     @EnvironmentObject private var storeModel: StoreModel
+    
     @State private var errorMessage = ""
     @State private var switcher = false
     
     var body: some View {
         VStack {
-            
-            List(storeModel.categories, id: \.id) { category in
-                HStack {
-                    AsyncImage(url: category.image) { image in
-                        image.resizable()
-                            .frame(maxWidth: 100, maxHeight: 100)
-                            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                            .scaleEffect(switcher ? 1.2 : 1)
-                            .animation(.linear, value: switcher)
-                            .onTapGesture {
-                                switcher.toggle()
-                            }
-                        
-                    } placeholder: {
-                        ProgressView()
-                    }
-                    Text(category.name)
-                }
-                
-            }.task {
-                do {
+            NavigationStack {
+                List(storeModel.categories, id: \.id) { category in
                     
-                    try await storeModel.fetchCategories()
-                } catch {
-                    errorMessage = error.localizedDescription
+                    NavigationLink(value: category) {
+                        
+                        HStack {
+                            AsyncImage(url: category.image) { image in
+                                image.resizable()
+                                    .frame(maxWidth: 100, maxHeight: 100)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                                
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            Text(category.name)
+                        }
+                    }
+                    .navigationDestination(for: Category.self) { category in
+                        ProductListScreen(category: category)
+                    }
+                    
+                    
+                }.task {
+                    do {
+                        try await storeModel.fetchCategories()
+                    } catch {
+                        errorMessage = error.localizedDescription
+                    }
                 }
+                Text(errorMessage)
             }
-            Text(errorMessage)
+            .navigationTitle("Store")
         }
     }
 }
